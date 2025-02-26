@@ -23,7 +23,8 @@ I used structured HTML elements to create a personal portfolio webpage for this 
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-</nav>'''
+</nav>
+'''
 
 The "nav" element contains a list of links for easy navigation and the "a" tags reference section IDs for smooth scrolling.
 
@@ -33,7 +34,8 @@ The "nav" element contains a list of links for easy navigation and the "a" tags 
             <th>Course</th>
             <th>Institution</th>
             <th>Year</th>
-        </tr>'''
+        </tr>
+        '''
         
 The "table" organizes coursework details and "th" is used for column headings, and "td" for data entries.
 
