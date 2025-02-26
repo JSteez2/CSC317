@@ -15,7 +15,7 @@ I used structured HTML elements to create a personal portfolio webpage for this 
 
 ### Code Explanation:
 
-<nav>
+"<nav>
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -23,15 +23,20 @@ I used structured HTML elements to create a personal portfolio webpage for this 
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-</nav>
-The <nav> element contains a list of links for easy navigation and the <a> tags reference section IDs for smooth scrolling.
+</nav>"
 
-  <h3>Relevant Courses & Achievements</h3>
+The "<nav>" element contains a list of links for easy navigation and the "<a>" tags reference section IDs for smooth scrolling.
+
+  "<h3>Relevant Courses & Achievements</h3>
     <table border="1">
         <tr>
             <th>Course</th>
             <th>Institution</th>
             <th>Year</th>
-        </tr>
-The <table> organizes coursework details and <th> is used for column headings, and <td> for data entries.
+        </tr>"
+        
+The "<table>" organizes coursework details and "<th>" is used for column headings, and "<td>" for data entries.
+
+
+
 
