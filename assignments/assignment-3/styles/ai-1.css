@@ -1,0 +1,121 @@
+/* 49ers Theme - Gold, Red, and Black with readable text */
+
+/* CSS Variables for easy customization */
+:root {
+    --primary-color: #AA0000; /* 49ers Red */
+    --secondary-color: #B3995D; /* 49ers Gold */
+    --background-color: #000000; /* Black Background */
+    --text-color: #FFFFFF; /* White Text */
+    --button-bg: #B3995D; /* Gold Button */
+    --button-text: #000000; /* Black Button Text */
+}
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #1E1E1E; /* Dark Gray for contrast */
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+/* Links */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222222; /* Darker gray for contrast */
+}
+
+th, td {
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
