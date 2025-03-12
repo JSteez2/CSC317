@@ -1,6 +1,6 @@
 I'm looking to create a CSS file for my portfolio website inspired by this image. I'd like to incorporate elements from the image such as its colors, textures, and overall mood into my site design.
 
-[Insert your image here]
+(https://thumbs.dreamstime.com/b/english-material-pattern-7414524.jpg)
 
 Please generate a CSS file that:
 
