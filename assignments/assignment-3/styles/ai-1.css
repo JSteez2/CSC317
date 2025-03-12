@@ -122,4 +122,60 @@ footer {
 .highlight-text {
     color: var(--niners-gold);
     font-weight: bold;
+}/* ------------------------------- */
+/* 📱 Mobile-Friendly Navigation 📱 */
+/* ------------------------------- */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+/* --------------------------------------- */
+/* 📷 Responsive Oval Images for Mobile 📷 */
+/* --------------------------------------- */
+#images img,
+header img {
+    width: 80%; /* Ensures images resize properly */
+    max-width: 200px; /* Prevents images from getting too large */
+    height: auto;
+    border-radius: 50%; /* Keeps images oval */
+}
+
+/* ------------------------------------------------ */
+/* 🔥 Adjust Header & Fonts for Mobile Readability 🔥 */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    header h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
 }
