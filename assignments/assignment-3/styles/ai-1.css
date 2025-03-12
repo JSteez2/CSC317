@@ -1,45 +1,56 @@
-/* 49ers Theme - Gold, Red, and Black with readable text */
+/* 49ers Theme - Red and Gold Accents, Oval Images, and Styled Font */
 
-/* CSS Variables for easy customization */
+/* CSS Variables for easy theming */
 :root {
-    --primary-color: #AA0000; /* 49ers Red */
-    --secondary-color: #B3995D; /* 49ers Gold */
-    --background-color: #000000; /* Black Background */
-    --text-color: #FFFFFF; /* White Text */
-    --button-bg: #B3995D; /* Gold Button */
-    --button-text: #000000; /* Black Button Text */
+    --niners-red: #AA0000;
+    --niners-dark-red: #800000;
+    --niners-gold: #B3995D;
+    --text-white: #FFFFFF;
+    --text-dark: #2B2B2B;
 }
 
-/* General Styling */
+/* Global Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: "Arial Black", sans-serif;
+    background-color: var(--niners-red);
+    color: var(--text-white);
     margin: 0;
-    padding: 0;
-}
-
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
     padding: 20px;
     text-align: center;
 }
 
+/* Header Styling */
+header {
+    background-color: var(--niners-dark-red);
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid var(--niners-gold);
+}
+
+/* Text Styling */
 h1, h2, h3 {
-    color: var(--secondary-color);
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--niners-gold);
+    text-shadow: 2px 2px 5px var(--text-dark);
 }
 
-/* Navigation Bar */
-nav {
-    background-color: var(--secondary-color);
-    padding: 10px;
-    text-align: center;
+/* Oval Styling for All Images */
+#images img, header img {
+    border-radius: 50%; /* Makes images oval */
+    border: 5px solid var(--niners-gold);
+    transition: transform 0.3s ease-in-out;
 }
 
+#images img:hover, header img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--niners-gold);
+}
+
+/* Navigation Styling */
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -48,74 +59,67 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: var(--background-color);
+nav a {
+    color: var(--text-white);
+    font-size: 18px;
     font-weight: bold;
-    padding: 10px 15px;
-    background-color: var(--primary-color);
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: var(--niners-dark-red);
+    border: 3px solid var(--niners-gold);
     border-radius: 5px;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    background-color: var(--text-color);
-    color: var(--primary-color);
+nav a:hover {
+    background-color: var(--niners-gold);
+    color: var(--niners-dark-red);
 }
 
-/* Sections */
+/* Section Styling */
 section {
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
     padding: 20px;
-    margin: 20px;
-    background-color: #1E1E1E; /* Dark Gray for contrast */
     border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 5px 5px 15px rgba(255, 215, 0, 0.3);
+    border: 3px solid var(--niners-gold);
 }
 
 /* Buttons */
 button {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    padding: 10px 15px;
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
+    border: 2px solid var(--niners-gold);
+    padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
+    text-transform: uppercase;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: var(--text-color);
-    color: var(--primary-color);
-}
-
-/* Links */
-a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #222222; /* Darker gray for contrast */
-}
-
-th, td {
-    border: 1px solid var(--secondary-color);
-    padding: 10px;
-    text-align: left;
-    color: var(--text-color);
+    background-color: var(--niners-gold);
+    color: var(--niners-dark-red);
+    border: 2px solid var(--text-white);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 15px;
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-top: 3px solid var(--niners-gold);
+}
+
+/* Additional Enhancements */
+.highlight-text {
+    color: var(--niners-gold);
+    font-weight: bold;
 }
