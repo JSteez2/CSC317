@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Week 0 Practice</title>
+</head>
+<body>
+  <h1>JavaScript Week 0 Practice</h1>
+  <button id="greetButton">Click Me!</button>
+  <div id="output" style="margin-top:1em; font-size:1.2em;"></div>
+
+  <!-- Link to your script -->
+  <script src="./scripts/hello.js"></script>
+  <script>
+    // When the button is clicked, call createMessage and display result
+    document.getElementById("greetButton").addEventListener("click", () => {
+      // createMessage comes from hello.js
+      document.getElementById("output").textContent = createMessage("JavaScript");
+    });
+  </script>
+</body>
+</html>
