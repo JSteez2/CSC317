@@ -12,7 +12,9 @@ body {
 a { color: #0af; text-decoration: none; margin-bottom: 1rem; }
 
 .calculator-container {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;   /* caps it at your design width */
+    margin: 0 auto;     /* center on larger screens */
 }
 
 .display {
@@ -53,4 +55,15 @@ a { color: #0af; text-decoration: none; margin-bottom: 1rem; }
 
 .zero {
     grid-column: span 2;
+
+    @media (max-width: 360px) {
+        .button {
+            padding: 0.8rem;
+            font-size: 1rem;
+        }
+        .display {
+            font-size: 1.5rem;
+            padding: 0.8rem;
+        }
+    }
 }

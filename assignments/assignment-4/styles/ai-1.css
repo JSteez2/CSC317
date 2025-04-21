@@ -1,0 +1,184 @@
+/* Please create a 49ers theme css file with readable texts
+that are not white unless the background color can accommodate it
+based on this sample index.hmtl below.
+Thank you! */
+
+/* CSS Variables for easy theming */
+:root {
+    --niners-red: #AA0000;
+    --niners-dark-red: #800000;
+    --niners-gold: #B3995D;
+    --text-white: #FFFFFF;
+    --text-dark: #2B2B2B;
+}
+
+/* Global Styling */
+body {
+    font-family: "Arial Black", sans-serif;
+    background-color: var(--niners-red);
+    color: var(--text-white);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--niners-dark-red);
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid var(--niners-gold);
+}
+
+/* Text Styling */
+h1, h2, h3 {
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--niners-gold);
+    text-shadow: 2px 2px 5px var(--text-dark);
+}
+
+/* Oval Styling for All Images */
+#images img, header img {
+    border-radius: 50%; /* Makes images oval */
+    border: 5px solid var(--niners-gold);
+    transition: transform 0.3s ease-in-out;
+}
+
+#images img:hover, header img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--niners-gold);
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--text-white);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: var(--niners-dark-red);
+    border: 3px solid var(--niners-gold);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--niners-gold);
+    color: var(--niners-dark-red);
+}
+
+/* Section Styling */
+section {
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 5px 5px 15px rgba(255, 215, 0, 0.3);
+    border: 3px solid var(--niners-gold);
+}
+
+/* Buttons */
+button {
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
+    border: 2px solid var(--niners-gold);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--niners-gold);
+    color: var(--niners-dark-red);
+    border: 2px solid var(--text-white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-top: 3px solid var(--niners-gold);
+}
+
+/* Additional Enhancements */
+.highlight-text {
+    color: var(--niners-gold);
+    font-weight: bold;
+}/* ------------------------------- */
+/* 📱 Mobile-Friendly Navigation 📱 */
+/* ------------------------------- */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+/* --------------------------------------- */
+/* 📷 Responsive Oval Images for Mobile 📷 */
+/* --------------------------------------- */
+#images img,
+header img {
+    width: 80%; /* Ensures images resize properly */
+    max-width: 200px; /* Prevents images from getting too large */
+    height: auto;
+    border-radius: 50%; /* Keeps images oval */
+}
+
+/* ------------------------------------------------ */
+/* 🔥 Adjust Header & Fonts for Mobile Readability 🔥 */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    header h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+}

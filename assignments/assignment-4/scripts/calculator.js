@@ -1,5 +1,4 @@
 // calculator.js
-
 const display = document.getElementById("display");
 const nums = document.querySelectorAll("[data-number]");
 const ops  = document.querySelectorAll("[data-operator]");
@@ -50,8 +49,23 @@ eqBtn   .addEventListener("click", compute);
 
 // Keyboard support
 document.addEventListener("keydown", e => {
-    if (/\d/.test(e.key) || e.key === ".") append(e.key);
-    if (["+","-","*","/"].includes(e.key)) chooseOperator(e.key);
-    if (e.key === "Enter") compute();
-    if (e.key === "Escape") { curr="0"; prev=op=null; update(); }
+    const key = e.key;
+
+    if (/\d/.test(key) || key === ".") {
+        // only digits or dots get here
+        append(key);
+
+    } else if (["+", "-", "*", "/"].includes(key)) {
+        // only operators get here
+        chooseOperator(key);
+
+    } else if (key === "Enter") {
+        compute();
+
+    } else if (key === "Escape") {
+        // your clear logic
+        curr = "0";
+        prev = op = null;
+        update();
+    }
 });
