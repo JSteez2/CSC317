@@ -2,11 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>JavaScript Calculator</title>
   <link rel="stylesheet" href="./styles/calculator.css">
 </head>
 <body>
-  <!-- Calculator HTML goes here -->
-  <script src="./scripts/calculator.js"></script>
+<p><a href="index.html">← Back to Portfolio</a></p>
+
+<div class="calculator-container">
+  <div id="display" class="display">0</div>
+  <div class="calculator-grid">
+    <button class="button utility" id="clear">AC</button>
+    <button class="button utility" id="toggle-sign">+/-</button>
+    <button class="button utility" id="percent">%</button>
+    <button class="button operator" data-operator="/">÷</button>
+
+    <button class="button number" data-number="7">7</button>
+    <button class="button number" data-number="8">8</button>
+    <button class="button number" data-number="9">9</button>
+    <button class="button operator" data-operator="*">×</button>
+
+    <button class="button number" data-number="4">4</button>
+    <button class="button number" data-number="5">5</button>
+    <button class="button number" data-number="6">6</button>
+    <button class="button operator" data-operator="-">−</button>
+
+    <button class="button number" data-number="1">1</button>
+    <button class="button number" data-number="2">2</button>
+    <button class="button number" data-number="3">3</button>
+    <button class="button operator" data-operator="+">+</button>
+
+    <button class="button number zero" data-number="0">0</button>
+    <button class="button number" data-number=".">.</button>
+    <button class="button operator" id="equals">=</button>
+  </div>
+</div>
+
+<script src="./scripts/calculator.js"></script>
 </body>
 </html>
