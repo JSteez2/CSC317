@@ -30,4 +30,4 @@ I built a vanilla-JS calculator (`calculator.html`, `calculator.css`, `calculato
 
 ## Acknowledgments
 - MDN documentation on [Keyboard Events](https://developer.mozilla.org/…)  
-- CSS Tricks grid guide                                                         EOF
+- CSS Tricks grid guide                                                         
