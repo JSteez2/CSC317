@@ -6,229 +6,232 @@
 /* ========================================================= */
 
 /* 📌 CSS Variables for Theming */
-:root {
-    --niners-red: #AA0000;
-    --niners-dark-red: #800000;
-    --niners-gold: #B3995D;
-    --text-white: #FFFFFF;
-    --text-dark: #2B2B2B;
-    --background-light: #f4f4f4;
-    --border-radius: 10px;
-    --transition-speed: 0.3s;
-}
-
-/* ========================= */
-/* 🌎 Global Styles (49ers) */
-/* ========================= */
+/* Make the page chrome (everything outside your section) pure black */
+html,
 body {
-    font-family: "Arial Black", sans-serif;
-    background-color: var(--niners-red);
-    color: var(--text-white);
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+  background-color: #B3995D !important;
 }
 
-/* ========================== */
-/* 🔥 Header Section (49ers) */
-/* ========================== */
+/* If you’re using a “.container” div with its own bg, force it black too */
+.container {
+  background-color: #B3995D !important;
+/* ────────────────────────────────────────────────────
+   VARIABLES
+──────────────────────────────────────────────────── */
+:root {
+  /* Core colors */
+  --page-bg:      #000000; /* black page background */
+  --gold-bg:      #B3995D; /* gold panel background */
+  --box-red:      #AA0000; /* bright red fill */
+  --box-red-d:    #800000; /* darker red hover */
+  --gold:         #B3995D; /* gold accent */
+  --black:        #000000; /* black outlines & text */
+  --white:        #FFFFFF; /* white text */
+
+  /* Misc */
+  --radius:       10px;
+  --transition:   0.3s;
+}
+
+/* ────────────────────────────────────────────────────
+   GLOBAL RESET & LAYOUT
+──────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg);
+  color: var(--white);
+  font-family: "Arial Black", sans-serif;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* wrap everything inside a gold panel */
+.container {
+  background-color: var(--gold-bg);
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  color: var(--white);
+}
+
+/* ────────────────────────────────────────────────────
+   HEADER
+──────────────────────────────────────────────────── */
 header {
-    background-color: var(--niners-dark-red);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    border: 3px solid var(--niners-gold);
+  background-color: var(--box-red);
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+header h1, header h2, header h3 {
+  margin: 8px 0;
+  color: var(--white);
 }
 
-/* Styled Heading Text */
-h1, h2, h3 {
-    font-family: "Arial Black", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--niners-gold);
-    text-shadow: 2px 2px 5px var(--text-dark);
+/* ────────────────────────────────────────────────────
+   OVAL IMAGES
+──────────────────────────────────────────────────── */
+#images img,
+header img {
+  border-radius: 50%;
+  border: 5px solid var(--gold);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+#images img:hover,
+header img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--gold);
 }
 
-/* ============================ */
-/* 📷 Image Styling (49ers) */
-/* ============================ */
-#images img, header img {
-    border-radius: 50%; /* Makes all images oval */
-    border: 5px solid var(--niners-gold);
-    transition: transform var(--transition-speed);
-}
-
-/* Hover Effect for Images */
-#images img:hover, header img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px var(--niners-gold);
-}
-
-/* ================================ */
-/* 🧭 Navigation Bar (Hybrid Style) */
-/* ================================ */
+/* ────────────────────────────────────────────────────
+   NAVIGATION
+──────────────────────────────────────────────────── */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
-
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline-block;
+  margin: 0 8px;
 }
-
 nav a {
-    color: var(--text-white);
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 12px 18px;
-    background-color: var(--niners-dark-red);
-    border: 3px solid var(--niners-gold);
-    border-radius: var(--border-radius);
-    transition: var(--transition-speed);
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: var(--box-red);
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  color: var(--white) !important;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color var(--transition);
 }
-
 nav a:hover {
-    background-color: var(--niners-gold);
-    color: var(--niners-dark-red);
+  background-color: var(--box-red-d);
 }
 
-/* ======================================== */
-/* 📜 Section Styling (Hybrid - Clean) */
-/* ======================================== */
+/* ────────────────────────────────────────────────────
+   SECTIONS
+──────────────────────────────────────────────────── */
 section {
-    background-color: var(--background-light);
-    color: var(--text-dark);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--niners-gold);
+  background-color: var(--box-red);
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  color: var(--white);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+section h2 {
+  margin-top: 0;
 }
 
-/* ===================== */
-/* 🎓 Education Section */
-/* ===================== */
-#education {
-    background-color: white;
+/* ────────────────────────────────────────────────────
+   TABLES
+──────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+th, td {
+  border: 2px solid var(--black);
+  padding: 8px;
+  color: var(--white);
+  background-color: var(--box-red);
+  text-align: left;
+}
+th {
+  font-weight: bold;
 }
 
-/* ===================== */
-/* 👔 Experience Section */
-/* ===================== */
-#experience {
-    background: var(--background-light);
-}
-
-/* ===================== */
-/* 🛠 Projects Section */
-/* ===================== */
-#projects {
-    background: white;
-}
-
-/* ========================== */
-/* 🔘 Buttons (49ers + Clean) */
-/* ========================== */
+/* ────────────────────────────────────────────────────
+   BUTTONS
+──────────────────────────────────────────────────── */
 button {
-    background-color: var(--niners-dark-red);
-    color: var(--text-white);
-    border: 2px solid var(--niners-gold);
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: var(--transition-speed);
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: var(--box-red);
+  border: 2px solid var(--black);
+  border-radius: var(--radius);
+  color: var(--white) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--transition);
 }
-
 button:hover {
-    background-color: var(--niners-gold);
-    color: var(--niners-dark-red);
-    border: 2px solid var(--text-white);
+  background-color: var(--box-red-d);
 }
 
-/* ===================== */
-/* 📧 Contact Form */
-/* ===================== */
+/* ────────────────────────────────────────────────────
+   FORMS (inputs, textarea)
+──────────────────────────────────────────────────── */
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 400px;
+  margin: auto;
+}
+input,
+textarea {
+  padding: 10px;
+  margin: 8px 0;
+  background-color: var(--gold-bg);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: var(--radius);
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+
+/* ────────────────────────────────────────────────────
+   FOOTER
+──────────────────────────────────────────────────── */
+footer {
+  background-color: var(--box-red);
+  border-top: 3px solid var(--black);
+  border-radius: var(--radius);
+  color: var(--white);
+  padding: 10px;
+  margin-top: 30px;
+}
+
+/* ────────────────────────────────────────────────────
+   RESPONSIVE
+──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav ul {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea, button {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: var(--border-radius);
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-/* ===================== */
-/* 👣 Footer (49ers) */
-/* ===================== */
-footer {
-    background-color: var(--niners-dark-red);
-    color: var(--text-white);
-    padding: 10px;
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    border-top: 3px solid var(--niners-gold);
-}
-
-/* =========================================== */
-/* 📱 Responsive Design (Mobile Optimization) */
-/* =========================================== */
-@media (max-width: 768px) {
-    /* Responsive Navigation */
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    nav a {
-        display: block;
-        width: 80%;
-        text-align: center;
-        padding: 15px;
-    }
-
-    /* Responsive Oval Images */
-    #images img,
-    header img {
-        width: 80%;
-        max-width: 200px;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    /* Adjust Font Sizes */
-    header h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    header h2 {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    header h3 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    section {
-        padding: 15px;
-    }
+    align-items: center;
+  }
+  nav ul li {
+    margin: 6px 0;
+  }
+  nav a {
+    width: 80%;
+  }
+  #images img,
+  header img {
+    width: 80%;
+    max-width: 200px;
+  }
+  section,
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
 }
