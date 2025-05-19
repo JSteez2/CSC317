@@ -6,8 +6,29 @@
 /* ========================================================= */
 
 /* 📌 CSS Variables for Theming */
+<<<<<<< HEAD
 /* Make the page chrome (everything outside your section) pure black */
 html,
+=======
+
+/* ────────────────────────────────────────────────────────────────
+   VARIABLES
+──────────────────────────────────────────────────────────────── */
+:root {
+    --niners-red: #AA0000;
+    --niners-dark-red: #800000;
+    --niners-gold: #B3995D;
+    --text-white: #FFFFFF;
+    --text-dark: #2B2B2B;
+    --background-light: #f4f4f4;
+    --border-radius: 10px;
+    --transition-speed: 0.3s;
+}
+
+/* ========================= */
+/* 🌎 Global Styles (49ers) */
+/* ========================= */
+>>>>>>> a22f256 (Ignore IDE metadata in assignments/.idea)
 body {
   background-color: #B3995D !important;
 } 
@@ -235,3 +256,79 @@ footer {
     padding: 15px;
   }
 }
+<<<<<<< HEAD
+=======
+
+input, textarea, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* ===================== */
+/* 👣 Footer (49ers) */
+/* ===================== */
+footer {
+    background-color: var(--niners-dark-red);
+    color: var(--text-white);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    border-top: 3px solid var(--niners-gold);
+}
+
+/* =========================================== */
+/* 📱 Responsive Design (Mobile Optimization) */
+/* =========================================== */
+@media (max-width: 768px) {
+    /* Responsive Navigation */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Responsive Oval Images */
+    #images img,
+    header img {
+        width: 80%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    /* Adjust Font Sizes */
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    header h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+>>>>>>> a22f256 (Ignore IDE metadata in assignments/.idea)
