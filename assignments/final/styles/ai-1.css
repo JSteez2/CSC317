@@ -4,11 +4,8 @@ based on this sample index.hmtl below.
 Thank you! */
 
 /* CSS Variables for easy theming */
-<<<<<<< HEAD
 
 /* Make the page chrome (everything outside your section) pure black */
-=======
->>>>>>> a22f256 (Ignore IDE metadata in assignments/.idea)
 html,
 body {
   background-color: #000000 !important;
