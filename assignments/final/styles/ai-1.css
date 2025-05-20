@@ -1,0 +1,190 @@
+/* Please create a 49ers theme css file with readable texts
+that are not white unless the background color can accommodate it
+based on this sample index.hmtl below.
+Thank you! */
+
+/* CSS Variables for easy theming */
+
+/* Make the page chrome (everything outside your section) pure black */
+html,
+body {
+  background-color: #000000 !important;
+}
+
+/* If you’re using a “.container” div with its own bg, force it black too */
+.container {
+  background-color: #000000 !important;
+}
+
+:root {
+    --dark-black: #1a1a1a;
+    --light-black: #2e2e2e;
+    --deep-purple: #5e2a7e;
+    --bright-purple: #9b4dcb;
+    --sky-blue: #4da6ff;
+    --text-white: #f5f5f5;
+    --text-light: #dddddd;
+}
+
+/* Global Styling */
+body {
+    font-family: "Arial Black", sans-serif;
+    background-color: var(--dark-black);
+    color: var(--text-white);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--light-black);
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid var(--bright-purple);
+}
+
+/* Text Styling */
+h1, h2, h3 {
+    font-family: "Arial Black", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--sky-blue);
+    text-shadow: 2px 2px 5px var(--deep-purple);
+}
+
+/* Oval Styling for All Images */
+#images img, header img {
+    border-radius: 50%;
+    border: 5px solid var(--bright-purple);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#images img:hover, header img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--bright-purple);
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav a {
+    color: var(--text-white);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: var(--deep-purple);
+    border: 3px solid var(--bright-purple);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: var(--sky-blue);
+    color: var(--dark-black);
+}
+
+/* Section Styling */
+section {
+    background-color: var(--light-black);
+    color: var(--text-white);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 5px 5px 15px rgba(77, 166, 255, 0.3);
+    border: 3px solid var(--bright-purple);
+}
+
+/* Buttons */
+button {
+    background-color: var(--deep-purple);
+    color: var(--text-white);
+    border: 2px solid var(--bright-purple);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+button:hover {
+    background-color: var(--sky-blue);
+    color: var(--dark-black);
+    border: 2px solid var(--text-white);
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-black);
+    color: var(--text-white);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border-top: 3px solid var(--bright-purple);
+}
+
+/* Highlight helper */
+.highlight-text {
+    color: var(--sky-blue);
+    font-weight: bold;
+}
+
+/* ------------------------------- */
+/* 📱 Mobile-Friendly Navigation 📱 */
+/* ------------------------------- */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    nav a {
+        display: block;
+        width: 80%;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+/* --------------------------------------- */
+/* 📷 Responsive Oval Images for Mobile 📷 */
+/* --------------------------------------- */
+#images img,
+header img {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------ */
+/* 🔥 Adjust Header & Fonts for Mobile Readability 🔥 */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    header h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+    header h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    section {
+        padding: 15px;
+    }
+}

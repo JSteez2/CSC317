@@ -1,0 +1,221 @@
+/* ========================================================= */
+/* 🎨 Hybrid Theme: Combines 49ers Theme with Clean Design 🎨 */
+/* - Uses 49ers colors and styling from the 49ers theme      */
+/* - Implements readability & spacing from the clean theme   */
+/* - Ensures responsiveness for mobile and desktop           */
+/* ========================================================= */
+
+/* 📌 CSS Variables for Theming */
+
+html,
+body {
+  background-color: #B3995D !important;
+}
+
+/* If you’re using a “.container” div with its own bg, force it black too */
+.container {
+  background-color: #B3995D !important;
+}
+
+
+/* ────────────────────────────────────────────────────────────────
+   VARIABLES
+──────────────────────────────────────────────────────────────── */
+:root {
+  /* Core palette */
+  --page-bg:       #000000; /* true black background */
+  --gold:          #B3995D; /* gold accent & panel bg */
+  --red:           #AA0000; /* bright red fill */
+  --black:         #000000; /* outlines, table border */
+  --white:         #FFFFFF; /* text on red boxes */
+
+  /* Radius & animation */
+  --radius:        12px;
+  --transition:    0.25s ease-in-out;
+}
+
+/*--------------*/
+/* Global Styles*/
+/*--------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg);
+  color: var(--white);
+  font-family: "Arial Black", sans-serif;
+  line-height: 1.5;
+}
+
+/*--------------*/
+/* Page Wrapper */
+/*--------------*/
+.container {
+  background-color: var(--gold);          /* gold panel */
+  border: 3px solid var(--black);         /* black outline */
+  border-radius: var(--radius);
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 30px;
+  transition: background-color var(--transition);
+}
+
+/*--------------*/
+/* Header       */
+/*--------------*/
+header {
+  background-color: var(--red);
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+header h1,
+header h2,
+header h3 {
+  margin: 10px 0;
+  color: var(--white);
+}
+
+/*--------------*/
+/* Oval Images  */
+/*--------------*/
+#images img,
+header img {
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 50%;                     /* oval */
+  border: 5px solid var(--gold);          /* gold border */
+  transition: transform var(--transition);
+}
+
+#images img:hover,
+header img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--gold);
+}
+
+/*--------------*/
+/* Navigation   */
+/*--------------*/
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: var(--red);
+  color: var(--white);
+  text-decoration: none;
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+nav a:hover {
+  background-color: var(--black);
+  color: var(--red);
+}
+
+/*--------------*/
+/* Sections     */
+/*--------------*/
+section {
+  background-color: var(--red);
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+/*--------------*/
+/* Tables       */
+/*--------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 2px solid var(--black);
+  padding: 8px;
+  color: var(--white);
+  background-color: var(--red);
+  text-align: left;
+}
+
+th {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/*--------------*/
+/* Buttons      */
+/*--------------*/
+button {
+  padding: 12px 24px;
+  background-color: var(--black);
+  color: var(--white);
+  border: 3px solid var(--white);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/*--------------*/
+/* Footer       */
+/*--------------*/
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  border-top: 3px solid var(--white);
+  padding: 15px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*--------------*/
+/* Responsive   */
+/*--------------*/
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+  #images img,
+  header img {
+    width: 70%;
+    max-width: 180px;
+  }
+}
