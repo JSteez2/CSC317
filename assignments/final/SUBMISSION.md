@@ -6,32 +6,28 @@
 ## Links
 
 - **GitHub Repository:** https://github.com/JSteez2/CSC317
-- **Live GitHub Pages URL:** https://JSteez2.github.io/CSC317/
 
 ---
 
-## Implementation Overview
+## Group Project Reflection
 
-For Assignment 4, I began by configuring Node.js LTS and verifying with simple console scripts, then built a fully featured calculator in vanilla JavaScript. The calculator handles basic arithmetic operations (addition, subtraction, multiplication, division), percentage calculations, sign toggling, decimal input, and keyboard events. I leveraged ES6 features (const/let, arrow functions, template literals) for cleaner, more modular code. The UI uses CSS Grid for a responsive layout, with fluid widths and media queries for mobile support. I integrated the calculator into my existing portfolio by adding a project card and deploying via GitHub Pages in a docs folder. I also implemented robust error handling for edge cases like division by zero and multiple decimals. Overall, this project deepened my understanding of DOM manipulation, event handling, and deployment workflows.
+Building the Budget Planner as a group (https://csc317-group-e.onrender.com/) was a valuable end-to-end exercise in full-stack web development and team collaboration. Key takeaways:
 
----
+1. **Architecture & Integration**  
+   - We designed a clear separation between front-end, back-end, and data layers: a React/vanilla-JS UI for adding and viewing transactions, an Express API for CRUD operations, and MongoDB to persist user data.  
+   - Integrating these pieces taught me how to structure routes, handle CORS, and coordinate asynchronous calls so that the UI always reflects the latest server state.
 
-## Challenges and Solutions
+2. **Deployment & DevOps**  
+   - Deploying the app to Render demonstrated the importance of environment variables, build scripts, and health checks. I learned to write a `Procfile` (or equivalent) and configure a production-ready Node environment.  
+   - Setting up automatic redeploys on push improved my confidence in continuous delivery practices.
 
-- **Responsive Layout:** Ensuring the calculator grid resized correctly on mobile required adding the viewport meta tag and using `width:100%; max-width:320px` with media queries.
-- **Keyboard Support Conflicts:** My initial keydown handler triggered multiple actions; I refactored it into an `if/else if` chain so only one action fires per key.
-- **GitHub Pages Setup:** I moved the site files into a `docs/` folder and configured Pages to avoid 404 errors.
+3. **Team Processes & Version Control**  
+   - We adopted a feature-branch workflow with pull requests and code reviews. This minimized merge conflicts and kept our `main` branch stable.  
+   - Daily stand-ups and a shared Kanban board ensured everyone knew their responsibilities—whether building the “Add Transaction” form, writing validation logic, or styling the dashboard.
 
----
+4. **Usability & Responsiveness**  
+   - Through iterative design reviews, I refined how forms provide immediate feedback on invalid input, and how the budget-limit feature alerts users when they exceed their targets.  
+   - Ensuring the layout adapted across mobile and desktop screens strengthened my CSS Flexbox/Grid skills and my understanding of accessibility best practices.
 
-## Additional Features
+Overall, this project solidified my ability to take a collaborative idea from concept to a live, fully deployed application—balancing code quality, user experience, and operational reliability.  
 
-- **Theme Switcher (Bonus):** Implemented a light/dark mode toggle for both the calculator and portfolio using CSS custom properties and a simple JavaScript switch.
-
----
-
-## Acknowledgments
-
-- MDN Web Docs for guidance on [KeyboardEvent](https://developer.mozilla.org/…) handling and CSS Grid.
-- CSS-Tricks for responsive layout patterns.
-- Stack Overflow for troubleshooting GitHub Pages deployment nuances.
